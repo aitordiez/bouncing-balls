@@ -42,8 +42,10 @@ public class BallDemo
             int green=bolaAleatoria.nextInt(256);
             int blue=bolaAleatoria.nextInt(256);
             Color colores= new Color(red, green, blue);
+            //Crearemos de forma aleatoria la posicion 
+            int posicionX=bolaAleatoria.nextInt(300);
             //Muestra por pantalla las bolas que el usuario ha elegido por parametro
-            BouncingBall bolass= new BouncingBall(60 + (50*i), 60, radioDeLaBola, colores, ground, myCanvas);
+            BouncingBall bolass= new BouncingBall(posicionX, 60, radioDeLaBola, colores, ground, myCanvas);
             bolas.add(bolass);
             bolass.draw();
         }
