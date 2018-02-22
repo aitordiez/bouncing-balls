@@ -59,11 +59,13 @@ public class BallDemo
              for(int i=0; i<balls; i++){
                  bolas.get(i).move();
              }
-            // stop once ball has travelled a certain distance on x axis
-            /*if(ball.getXPosition() >= 550 || ball2.getXPosition() >= 550) {
-                finished = true;
-            }*/
-            
+             //La animación debe terminar cuando alguna bola se salga del suelo por la derecha.
+             for(int i=0; i<balls; i++){
+                 if(bolas.get(i).getXPosition()>=550){
+                     finished=true;
+                 }
+             }
+
         }
     }
 }
